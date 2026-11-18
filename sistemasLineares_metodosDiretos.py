@@ -1,10 +1,7 @@
 # Método direto de Gauss
 
 import numpy as np
-print("""
-Você deseja executar o problema proposto ou algum fornecido por você:
-[1] Problema proposto
-[2] Fornecer sistema""")
+
 
 
 def metodoGauss(opcaoEscolhida):
@@ -125,14 +122,20 @@ def imprimirMatriz(matriz, string="Matriz"):
         print()
         linha += 1
 
-while True:
-    opcaoEscolhida = int(input())
-    if opcaoEscolhida != 1 and opcaoEscolhida != 2:
-        print("Opcao inválida, tente novamente (1 ou 2)!")
-    else:
-        break
+
 
 def main():
+    print("""
+    Você deseja executar o problema proposto ou algum fornecido por você:
+    [1] Problema proposto
+    [2] Fornecer sistema""")
+    while True:
+        opcaoEscolhida = int(input())
+        if opcaoEscolhida != 1 and opcaoEscolhida != 2:
+            print("Opcao inválida, tente novamente (1 ou 2)!")
+        else:
+            break
+
     metodoGauss(opcaoEscolhida)
 
 if __name__ == "__main__":

@@ -158,38 +158,3 @@ def executar_sistema_personalizado():
 
 
 
-
-def menu_principal():
-
-    print("\n" + "=" * 65)
-    print("   SISTEMA DE CÁLCULO NUMÉRICO - MÉTODO DE GAUSS-SEIDEL")
-    print("=" * 65)
-    print("[1] Resolver a Questão 3 do Tópico 02 (Circuito do Problema)")
-    print("[2] Inserir dados para resolver outro sistema personalizado")
-    print("[3] Sair do Programa")
-    print("=" * 65)
-
-
-def main():
-    """
-    Função Principal (Main):
-    """
-    while True:
-        menu_principal()
-        try:
-            opcao = int(input("Escolha uma opção (1-3): "))
-            if opcao == 1:
-                executar_questao_problema()
-            elif opcao == 2:
-                executar_sistema_personalizado()
-            elif opcao == 3:
-                print("\nEncerrando o programa.")
-                break
-            else:
-                print("\nOpção inválida! Por favor, escolha entre 1, 2 e 3.")
-        except ValueError:
-            print("\nEntrada inválida! Digite um número inteiro correspondente à opção.")
-
-
-if __name__ == "__main__":
-    main()

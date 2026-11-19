@@ -76,8 +76,8 @@ def executar_questao_problema():
     F_x = np.array([18, 13, 11, 9, 6, 4, 2, 1], dtype=float)
 
     print("\nPontos Originais:")
-    print(f"x = {list(x)}")
-    print(f"F(x) = {list(F_x)}")
+    print(f"x = {x.tolist()}")
+    print(f"F(x) = {F_x.tolist()}")
     print("=" * 65)
 
     # Executa os três ajustes
@@ -132,39 +132,3 @@ def executar_sistema_personalizado():
         print(f"Ocorreu um erro durante a entrada de dados: {e}")
 
 
-def menu_principal():
-    """
-    Exibe o menu interativo no console.
-    """
-    print("\n" + "=" * 65)
-    print("   CÁLCULO NUMÉRICO - MÍNIMOS QUADRADOS (TÓPICO 03)")
-    print("=" * 65)
-    print("[1] Resolver a Questão 3 do Tópico 03 (Dados da Tabela)")
-    print("[2] Inserir dados personalizados para nova regressão")
-    print("[3] Sair do Programa")
-    print("=" * 65)
-
-
-def main():
-    """
-    Função Principal que gerencia o fluxo de execução.
-    """
-    while True:
-        menu_principal()
-        try:
-            opcao = int(input("Escolha uma opção (1-3): "))
-            if opcao == 1:
-                executar_questao_problema()
-            elif opcao == 2:
-                executar_sistema_personalizado()
-            elif opcao == 3:
-                print("\nEncerrando o programa. Bom trabalho na apresentação!")
-                break
-            else:
-                print("\nOpção inválida! Escolha entre 1, 2 e 3.")
-        except ValueError:
-            print("\nEntrada inválida! Digite um número inteiro.")
-
-
-if __name__ == "__main__":
-    main()

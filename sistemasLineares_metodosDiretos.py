@@ -123,20 +123,3 @@ def imprimirMatriz(matriz, string="Matriz"):
         linha += 1
 
 
-
-def main():
-    print("""
-    Você deseja executar o problema proposto ou algum fornecido por você:
-    [1] Problema proposto
-    [2] Fornecer sistema""")
-    while True:
-        opcaoEscolhida = int(input())
-        if opcaoEscolhida != 1 and opcaoEscolhida != 2:
-            print("Opcao inválida, tente novamente (1 ou 2)!")
-        else:
-            break
-
-    metodoGauss(opcaoEscolhida)
-
-if __name__ == "__main__":
-    main()

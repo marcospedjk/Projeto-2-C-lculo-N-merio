@@ -82,12 +82,12 @@ def executar_questao_problema():
         [9.5, -2.5, 0.0, -2.0, 0.0],
         [-2.5, 11.0, -3.5, 0.0, -5.0],
         [0.0, -3.5, 15.5, 0.0, -4.0],
-        [-2.0, 0.0, 0.0, 9.0, -3.0],
-        [0.0, -5.0, -4.0, -3.0, 16.0]
+        [-2.0, 0.0, 0.0, 7.0, -3.0],
+        [0.0, -5.0, -4.0, -3.0, 12.0]
     ], dtype=float)
 
     # Vetor de termos independentes (Fontes de tensão)
-    b = np.array([12.0, 16.0, 14.0, 10.0, 30.0], dtype=float)
+    b = np.array([12.0, -16.0, 14.0, 10.0, -30.0], dtype=float)
 
     # 1. Verifica o critério de convergência
     verificar_dominancia_diagonal(A)
